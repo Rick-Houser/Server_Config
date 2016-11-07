@@ -14,7 +14,7 @@
 sudo apt-get update -q
 
 # --------------------------
-# Remove debian packages
+# Remove Debian Packages
 # --------------------------
 # declare -a remove_packages=(
 #   "php5"
@@ -32,7 +32,7 @@ sudo apt-get update -q
 # done
 
 # --------------------------
-# Install debian packages
+# Install Debian Packages
 # --------------------------
 declare -a install_packages=(
   "apache2"
@@ -63,7 +63,7 @@ if [ -f "/var/www/html/index.html" ]; then
 fi
 
 # --------------------------
-# Setting metadata and content
+# Setting Metadata and Content
 # --------------------------
 
 # To change metadata for files or folders, use the following example as a guide.
@@ -90,6 +90,6 @@ sudo echo "${metadata[content]}" > "${metadata[file]}"
 # sudo find "${dir_metadata[directory]}" -type d -print0 | xargs -0 sudo chmod "${dir_metadata[directory_permissions]}"
 
 # --------------------------
-# Restart Apache service
+# Restart a Given Service
 # --------------------------
 sudo service apache2 restart
