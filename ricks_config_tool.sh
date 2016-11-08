@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-# Instructions to use this script:
-#
-# chmod +x SCRIPTNAME.sh
-#
-# sudo ./SCRIPTNAME.sh
-
-# Notes about this script:
 # This tool will check for updates and existing files before proceeding to setup
 # and configure LAMP stack to run a simple PHP web app.
+# See included README for instructions on usage and configuration.
+
+# Build our associative array from key val pairs in metadata.txt
+# Note: Syntax and order are important in this text file
+declare -A metadata
+while IFS== read -r key value; do
+  metadata[$key]=$value
+done < "files/metadata/metadata.txt"
 
 # Check for package manager updates
 sudo apt-get update -q
