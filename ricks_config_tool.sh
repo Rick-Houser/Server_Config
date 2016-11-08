@@ -4,6 +4,19 @@
 # and configure LAMP stack to run a simple PHP web app.
 # See included README for instructions on usage and configuration.
 
+
+# Populate our package_install array
+declare -A package_install
+while IFS== read -r value; do
+  $value >> package_install
+done < "files/packages/install.txt"
+
+# Populate our package_removal array
+declare -A package_removal
+while IFS== read -r value; do
+  $value >> package_removal
+done < "files/packages/remove.txt"
+
 # Build our associative array from key val pairs in metadata.txt
 # Note: Syntax and order are important in this text file
 declare -A metadata
