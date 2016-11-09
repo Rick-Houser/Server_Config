@@ -6,14 +6,14 @@
 
 
 # Populate our package_install array
-declare -A package_install
-while IFS== read -r value; do
+declare -a package_install
+while IFS='\n' read -r value; do
   $value >> package_install
 done < "files/packages/install.txt"
 
 # Populate our package_removal array
-declare -A package_removal
-while IFS== read -r value; do
+declare -a package_removal
+while IFS='\n' read -r value; do
   $value >> package_removal
 done < "files/packages/remove.txt"
 
