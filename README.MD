@@ -35,7 +35,7 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 * Transfer directory to the destination server using the following syntax:
 
   ```bash
-  scp ~/Slack_Challenge your_username@remotehost:/some/remote/directory
+  scp -r Slack_Challenge/ your_username@remotehost:/some/remote/directory
   ```
 
 * CD into the directory

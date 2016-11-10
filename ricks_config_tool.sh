@@ -4,8 +4,8 @@
 # and configure LAMP stack to run a simple PHP web app.
 # See included README for instructions on usage and configuration.
 
-# Check for package manager updates and upgrade to latest
-sudo apt-get update && sudo apt-get upgrade
+# Check for package manager updates
+sudo apt-get update
 
 # --------------------------
 # Remove Debian Packages

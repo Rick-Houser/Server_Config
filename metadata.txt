@@ -1,0 +1,5 @@
+permissions=644
+owner=root
+group=staff
+file=/var/www/html/index.php
+content=<?php header("Content-Type: text/plain"); echo "Hello, world!\n";
