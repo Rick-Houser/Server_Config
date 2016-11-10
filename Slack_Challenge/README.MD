@@ -15,7 +15,7 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 
 ## Structure:
 ``` bash
-  slack_challenge/
+  Slack_Challenge/
   +-- bootstrap.sh
   +-- ricks_config_tool.sh
   +-- metadata.txt
@@ -35,13 +35,13 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 * Transfer directory to the destination server using the following syntax:
 
   ```bash
-  scp ~/slack_challenge your_username@remotehost:/some/remote/directory
+  scp ~/Slack_Challenge your_username@remotehost:/some/remote/directory
   ```
 
 * CD into the directory
 
   ```bash
-  cd /slack_challenge
+  cd Slack_Challenge/
   ```
 
 * Make the scripts executable
