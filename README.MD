@@ -3,7 +3,7 @@
 This is a very rudimentary configuration management tool. This tool can be used
 to configure servers for the production service of a simple PHP application. This tool is modeled after professional tools such as Puppet, Chef, Fabric and Ansible.
 
-I really enjoyed this challenge as it led to me gaining a deeper understanding of automating server configuration, which is cool. I considered many options on how to structure this tool. It's first iteration was simply a list of install commands. Upon further reading, I learned to implement arrays in Bash 4. I chose this approach as it more closely resembles the hash structure Puppet uses when handling resources.
+I really enjoyed this challenge as it led to me gaining a deeper understanding of automating server configuration, which is cool. I considered many options on how to structure this tool. It's first iteration was simply a list of install commands. Upon further reading, I decided to implement arrays in Bash 4. I chose this approach as it more closely resembles the hash structure Puppet uses when handling resources.
 
 ## Abstractions:
 
@@ -35,7 +35,7 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 * Transfer directory to the destination server using the following syntax:
 
   ```bash
-  scp -r Slack_Challenge/ your_username@remotehost:/some/remote/directory
+  scp -r Slack_Challenge/ your_username@remotehost
   ```
 
 * CD into the directory
