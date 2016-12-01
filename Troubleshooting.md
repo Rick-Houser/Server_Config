@@ -3,8 +3,8 @@
 
 ### Steps Taken:
   Ran commands `du -sh` and `df -h` to check file space usage and file system disk usage.
-  After running these commands I noticed there was a huge difference. Doing a quick google search, I happened to find this can happens when a large file has been deleted but is still open by some process. To find the culprit, I checked for open files and searched for the term "deleted", with `lsof | grep "deleted"` commands.
-  I tried killing the process that is still using the deleted file with the `kill` command. This didn't work. I escalated the signal by passing the `-KILL` option to the `kill` command on the ID of the process (PID).
+  After running these commands I noticed there was a huge difference. Doing a quick google search, I happened to find this can happen when a large file has been deleted but is still open by some process. To find the culprit, I checked for open files and searched for the term "deleted", with `lsof | grep "deleted"` commands.
+  I tried killing the process that is still using the deleted file with the `kill` command. This didn't work so I escalated the signal by passing the `-KILL` option to the `kill` command on the ID of the process (PID).
 
 ### Solution:
   Killed the service that is using the deleted file.
@@ -29,7 +29,7 @@
 
 ### Steps Taken:
   A quick search for the errors received when trying to run apt-get pointed me to `/etc/resolv.conf`.
-  After checking `/etc/resolv.conf` I noticed a general "127.0.0.1" IP address.
+  After checking `/etc/resolv.conf`, I noticed a general "127.0.0.1" IP address.
   I replaced it with "8.8.8.8" (Google DNS).
 
 ### Solution:
@@ -38,7 +38,7 @@
 -------------------------------------------------------------------------------
 
 ## Issue #4:
-  Encountered multiple errors when running my config tool. The solution involved has two parts.
+  Encountered multiple errors when running lumos_config tool. The solution involved has two parts.
 
   Error 1: "AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message"
 
@@ -64,7 +64,7 @@
 
 ### Steps Taken:
   I tried curl and realized packets weren't getting through.
-  I ran the `nmap -sV IP_ADDRESS` command from my computer and saw that port 80 had the "filtered" status. I checked iptables and saw connections to port 80 were being dropped. I used the `sudo iptables -F` command and flushed that rule. Had there been more than one rule in place, I would have flushed just the one rule and leave the others in place.
+  I ran the `nmap -sV IP_ADDRESS` command from my computer and saw that port 80 had the "filtered" status. I checked iptables and saw connections to port 80 were being dropped. I used the `sudo iptables -F` command and flushed that rule. Had there been more than the one rule in place, I would have flushed just the one rule and left the others in place.
 
 ### Solution:
   I flushed the iptables rule that was dropping connections.
