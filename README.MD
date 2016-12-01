@@ -5,6 +5,8 @@ to configure servers for the production service of a simple PHP application. Thi
 
 I really enjoyed this challenge as it led to me gaining a deeper understanding of automating server configuration, which is cool. I considered many options on how to structure this tool. It's first iteration was simply a list of install commands. Upon further reading, I decided to implement arrays in Bash 4. I chose this approach as it more closely resembles the hash structure Puppet uses when handling resources.
 
+For the second part of the challenge I am tasked with troubleshooting a severely misconfigured server. In the process I document the server issue, the steps taken, and the solution. See my notes in Troubleshooting.md.
+
 ## Abstractions:
 
 1. Automates setup of LAMP stack
