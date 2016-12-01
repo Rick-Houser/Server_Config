@@ -1,7 +1,7 @@
-# Server Configuration Tool
+# Lumos
 
 This is a very rudimentary configuration management tool. This tool can be used
-to configure servers for the production service of a simple PHP application. This tool is modeled after professional tools such as Puppet, Chef, Fabric and Ansible.
+to configure servers for the production service of a simple PHP application. This tool is modeled after industry tools such as Puppet, Chef, Fabric and Ansible.
 
 I really enjoyed this challenge as it led to me gaining a deeper understanding of automating server configuration, which is cool. I considered many options on how to structure this tool. It's first iteration was simply a list of install commands. Upon further reading, I decided to implement arrays in Bash 4. I chose this approach as it more closely resembles the hash structure Puppet uses when handling resources.
 
@@ -19,7 +19,7 @@ For the second part of the challenge I am tasked with troubleshooting a severely
 ``` bash
   Server_Config/
   +-- bootstrap.sh
-  +-- config_tool.sh
+  +-- lumos_config.sh
   +-- metadata.txt
   +-- debian_packages
       +-- install.txt
@@ -49,7 +49,7 @@ For the second part of the challenge I am tasked with troubleshooting a severely
 * Make the scripts executable
 
   ```bash
-  chmod +x config_tool.sh bootstrap.sh
+  chmod +x lumos_config.sh bootstrap.sh
   ```
 
 * Install dependency
@@ -61,5 +61,5 @@ For the second part of the challenge I am tasked with troubleshooting a severely
 * Run the script
 
   ```bash
-  ./config_tool
+  ./lumos_config.sh
   ```
