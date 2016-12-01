@@ -64,7 +64,7 @@ Soluton:
 
 ### Steps Taken:
   I tried curl and realized packets weren't getting through.
-  I ran the `nmap -sV 52.23.214.88` command from my computer and saw that port 80 had the "filtered" status. I checked iptables and saw connections to port 80 were being dropped. I used the `sudo iptables -F` command and flushed that rule. Had there been more than one rule inplace, I would have flushed just the one rule and leave the others in place.
+  I ran the `nmap -sV IP_ADDRESS` command from my computer and saw that port 80 had the "filtered" status. I checked iptables and saw connections to port 80 were being dropped. I used the `sudo iptables -F` command and flushed that rule. Had there been more than one rule inplace, I would have flushed just the one rule and leave the others in place.
 
 ### Solution:
   I flushed the iptables rule that was dropping connections.
