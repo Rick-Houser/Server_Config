@@ -1,4 +1,4 @@
-# Rick Houser's Configuration Tool
+# Server Configuration Tool
 
 This is a very rudimentary configuration management tool. This tool can be used
 to configure servers for the production service of a simple PHP application. This tool is modeled after professional tools such as Puppet, Chef, Fabric and Ansible.
@@ -15,9 +15,9 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 
 ## Structure:
 ``` bash
-  Slack_Challenge/
+  Server_Config/
   +-- bootstrap.sh
-  +-- ricks_config_tool.sh
+  +-- config_tool.sh
   +-- metadata.txt
   +-- debian_packages
       +-- install.txt
@@ -35,19 +35,19 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 * Transfer directory to the destination server using the following syntax:
 
   ```bash
-  scp -r Slack_Challenge/ your_username@remotehost
+  scp -r Server_Config/ your_username@remotehost
   ```
 
 * CD into the directory
 
   ```bash
-  cd Slack_Challenge/
+  cd Server_Config/
   ```
 
 * Make the scripts executable
 
   ```bash
-  chmod +x ricks_config_tool.sh bootstrap.sh
+  chmod +x config_tool.sh bootstrap.sh
   ```
 
 * Install dependency
@@ -59,5 +59,5 @@ I really enjoyed this challenge as it led to me gaining a deeper understanding o
 * Run the script
 
   ```bash
-  ./ricks_config_tool
+  ./config_tool
   ```
